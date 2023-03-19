@@ -1,6 +1,6 @@
 from seg_algoritmo0 import algoritmo0
 from Seg_Algoritmos1 import algoritmo1
-
+from Seg_Algoritmos2 import algoritmo2
 
 import time
 inicio = time.time()
@@ -26,7 +26,7 @@ if __name__== '__main__':
  print('')
 #------------------ALGORITMOS-------------------------------------------------------------------------------------------
 
-
+"""""
 #algoritmo 0- ORDENAMIENTO DE BUSBUJA----------------------------------------------------------------------------------
  inicio = time.perf_counter()
  #se llama la clase donde esta el metodo
@@ -40,6 +40,7 @@ if __name__== '__main__':
 
 
 print('')
+
 #algoritmo 1 - ordenamiento_por_insercion------------------------------------------------------------------------------
 inicio = time.perf_counter()
 # se llama la clase donde esta el metodo
@@ -54,6 +55,18 @@ print((fin - inicio) * 1000, 'tiempo de ejecucion de ordenamiento_por_insercion 
 
 
 #algoritmo 2
+print('')
+
+#algoritmo 2 - selectionSort------------------------------------------------------------------------------
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+algoritmo_2 = algoritmo2(listaEstimacion)
+listaOrdenada_2 = algoritmo_2.selectionSort(listaEstimacion)
+print('lista ordenada 2:',listaOrdenada_2)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de selectionSort en milisegundos')
+"""""
 
 
 #algoritmo 3

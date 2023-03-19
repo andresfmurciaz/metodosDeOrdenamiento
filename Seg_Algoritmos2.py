@@ -1,25 +1,28 @@
 import sys
-import time
-inicio = time.time()
-# Metodo por seleccion
-array = [20, 5, 21, 6, 23, 7, 34, 999, 68]
+
+class algoritmo2:
+
+    def __init__(self, array):
+        self.array = array
+        self.selectionSor = self.selectionSort(array)
 
 
-def selectionSort(array):
-    for i in range(len(array)):
+    def selectionSort(self,lista):
+        """
+        Ordena una lista de enteros utilizando el algoritmo Selection Sort y retorna la lista ordenada.
+        """
+        n = len(lista)
+        for i in range(n):
+            # Busca el mínimo elemento en el resto de la lista
+            min_idx = i
+            for j in range(i + 1, n):
+                if lista[j] < lista[min_idx]:
+                    min_idx = j
+            # Intercambia el mínimo elemento con el primer elemento sin ordenar
+            lista[i], lista[min_idx] = lista[min_idx], lista[i]
+        return lista
 
-        idxDes = i
-        for j in range(i+1, len(array)):
-            if array[idxDes] > array[j]:
-              idxDes = j
-
-        array[i], array[idxDes] = array[idxDes], array[i]
 
 
-selectionSort(array)
-print("Array Ordenado:")
-for i in range(len(array)):
-    print("%d" % array[i])
-    
-fin = time.time()
-print(fin-inicio),input('tiempo de ejecucion del algoritmo')
+
+
