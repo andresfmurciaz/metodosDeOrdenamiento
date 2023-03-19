@@ -1,4 +1,7 @@
 from seg_algoritmo0 import algoritmo0
+from Seg_Algoritmos1 import algoritmo1
+
+
 import time
 inicio = time.time()
 
@@ -21,18 +24,37 @@ if __name__== '__main__':
 
  print('lista que se va ordenar:',listaEstimacion)
 
-#------------------ALGORITMOS---------------------------------------
+#------------------ALGORITMOS-------------------------------------------------------------------------------------------
 
-#algoritmo 0- ORDENAMIENTO DE BUSBUJA
+
+#algoritmo 0- ORDENAMIENTO DE BUSBUJA----------------------------------------------------------------------------------
+ inicio = time.perf_counter()
+ #se llama la clase donde esta el metodo
  algoritmo_0= algoritmo0(listaEstimacion)
  listaOrdenada_0 = algoritmo_0.ordenamiento_de_burbuja(listaEstimacion)
- print(listaOrdenada_0)
+ print('lista ordenada 0:',listaOrdenada_0)
+
 #mide el tiempo
- fin = time.time()
- print(fin-inicio),input('tiempo de ejecucion del algoritmo')
+ fin = time.perf_counter()
+ print((fin-inicio)*1000,'tiempo de ejecucion del algoritmo 0 en milisegundos')
 
 
-#algoritmo 1
+"""""
+#algoritmo 1 - ordenamiento_por_insercion------------------------------------------------------------------------------
+inicio = time.time()
+# se llama la clase donde esta el metodo
+algoritmo_1 = algoritmo1(listaEstimacion)
+listaOrdenada_1 = algoritmo_1.ordenamiento_por_insercion(listaEstimacion)
+print('lista ordenada 0:',listaOrdenada_1)
+
+#mide el tiempo
+fin = time.time()
+print((fin - inicio) * 1000, 'tiempo de ejecucion del algoritmo 1')
+
+"""""
+
+
+
 
 
 #algoritmo 2
