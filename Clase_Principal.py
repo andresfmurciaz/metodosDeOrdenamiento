@@ -1,7 +1,7 @@
 from seg_algoritmo0 import algoritmo0
 from Seg_Algoritmos1 import algoritmo1
 from Seg_Algoritmos2 import algoritmo2
-
+from Seg_Algoritmo3 import algoritmo3
 import time
 inicio = time.time()
 
@@ -66,11 +66,24 @@ print('lista ordenada 2:',listaOrdenada_2)
 #mide el tiempo
 fin = time.perf_counter()
 print((fin - inicio) * 1000, 'tiempo de ejecucion de selectionSort en milisegundos')
-"""""
+
 
 
 #algoritmo 3
 
+print('')
+
+#algoritmo 3 - shellSort------------------------------------------------------------------------------
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+algoritmo_3 = algoritmo3(listaEstimacion)
+listaOrdenada_3 = algoritmo_3.shellSort(listaEstimacion)
+print('lista ordenada 3:',listaOrdenada_3)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de shellSort en milisegundos')
+
+"""""
 
 #algoritmo 4
 
