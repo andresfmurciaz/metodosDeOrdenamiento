@@ -23,7 +23,7 @@ if __name__== '__main__':
  listaEstimacion = lista_enteros[0:fin_lista]
 
  print('lista que se va ordenar:',listaEstimacion)
-
+ print('')
 #------------------ALGORITMOS-------------------------------------------------------------------------------------------
 
 
@@ -36,23 +36,19 @@ if __name__== '__main__':
 
 #mide el tiempo
  fin = time.perf_counter()
- print((fin-inicio)*1000,'tiempo de ejecucion del algoritmo 0 en milisegundos')
+ print((fin-inicio)*1000,'tiempo de ejecucion del ORDENAMIENTO DE BUSBUJA en milisegundos')
 
 
-"""""
+print('')
 #algoritmo 1 - ordenamiento_por_insercion------------------------------------------------------------------------------
-inicio = time.time()
+inicio = time.perf_counter()
 # se llama la clase donde esta el metodo
 algoritmo_1 = algoritmo1(listaEstimacion)
 listaOrdenada_1 = algoritmo_1.ordenamiento_por_insercion(listaEstimacion)
-print('lista ordenada 0:',listaOrdenada_1)
-
+print('lista ordenada 1:',listaOrdenada_1)
 #mide el tiempo
-fin = time.time()
-print((fin - inicio) * 1000, 'tiempo de ejecucion del algoritmo 1')
-
-"""""
-
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de ordenamiento_por_insercion en milisegundos')
 
 
 
