@@ -2,6 +2,9 @@ from seg_algoritmo0 import algoritmo0
 from Seg_Algoritmos1 import algoritmo1
 from Seg_Algoritmos2 import algoritmo2
 from Seg_Algoritmo3 import algoritmo3
+from Seg_Algoritmo4 import algoritmo4
+
+
 import time
 inicio = time.time()
 
@@ -16,6 +19,7 @@ with open('Numeros.txt', 'r') as archivo:
     lista_enteros = [int(x) for x in lista_datos]
 
 print(lista_enteros)
+
 
 #--------------------------imprime y pregunta----------------------------------------------------
 if __name__== '__main__':
@@ -83,12 +87,33 @@ print('lista ordenada 3:',listaOrdenada_3)
 fin = time.perf_counter()
 print((fin - inicio) * 1000, 'tiempo de ejecucion de shellSort en milisegundos')
 
+
+print('')
+#algoritmo 4- cocktailsort ----------------------------------------------------------------------------
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+algoritmo_4 = algoritmo4(listaEstimacion)
+listaOrdenada_4 = algoritmo_4.cocktailSort(listaEstimacion)
+print('lista ordenada 4:',listaOrdenada_4)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de cocktailSort en milisegundos')
+
 """""
+print('')
+#algoritmo 5-
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+algoritmo_4 = algoritmo4(listaEstimacion)
+listaOrdenada_4 = algoritmo_4.cocktailSort(listaEstimacion)
+print('lista ordenada 4:',listaOrdenada_4)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de cocktailSort en milisegundos')
 
-#algoritmo 4
 
 
-#algoritmo 5
+
 
 
 #algoritmo 6
