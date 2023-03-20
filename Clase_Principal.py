@@ -8,7 +8,12 @@ from Seg_algortimos6 import quicksort
 from Seg_Algoritmo7 import heapsort
 from Seg_Algoritmos8 import gnome_sort
 from seg_algoritmo9 import bucketSort
-
+from Seg_Algoritmo10 import bubbleSort
+from Seg_Algortimo11 import stooge_sort
+from seg_algoritmo12 import binary_insertion_sort
+from seg_algoritmo13 import strand_sort
+from seg_algoritmo14 import radixSort
+from seg_algoritmo15 import burbuja_doble
 
 
 import time
@@ -64,7 +69,7 @@ print((fin - inicio) * 1000, 'tiempo de ejecucion de ordenamiento_por_insercion 
 
 
 
-#algoritmo 2
+
 print('')
 
 #algoritmo 2 - selectionSort------------------------------------------------------------------------------
@@ -79,7 +84,7 @@ print((fin - inicio) * 1000, 'tiempo de ejecucion de selectionSort en milisegund
 
 
 
-#algoritmo 3
+
 
 print('')
 
@@ -159,7 +164,7 @@ print((fin - inicio) * 1000, 'tiempo de ejecucion de gnome_sort en milisegundos'
 
 
 
-#algoritmo 9
+#algoritmo 9 bucketSort ---------------------------------------------------------------------------------------
 print('')
 inicio = time.perf_counter()
 # se llama la clase donde esta el metodo
@@ -168,6 +173,70 @@ print('lista ordenada 9:',listaOrdenada_9)
 #mide el tiempo
 fin = time.perf_counter()
 print((fin - inicio) * 1000, 'tiempo de ejecucion de bucketSort en milisegundos')
+
+
+#algoritmo 10 compAndSwap ---------------------------------------------------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_10 = bubbleSort(listaEstimacion)
+print('lista ordenada 10:',listaOrdenada_10)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de compAndSwap en milisegundos')
+
+
+#algoritmo 11  stooge_sort-----NO SIRVE-------------------------------------------------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_11 = stooge_sort(listaEstimacion)
+print('lista ordenada 11:',listaOrdenada_11)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de stooge_sort en milisegundos')
+
+
+#algoritmo 12 binary insertion sort -------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_12 = binary_insertion_sort(listaEstimacion)
+print('lista ordenada 12:',listaOrdenada_12)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de binary insertion sort en milisegundos')
+
+
+#algoritmo 13 strand_sort --------------------------------------------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_13 = strand_sort(listaEstimacion)
+print('lista ordenada 13:',listaOrdenada_13)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de strand_sort sort en milisegundos')
+
+
+
+#algoritmo 14 radixSort --------------------------------------------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_14 = radixSort(listaEstimacion)
+print('lista ordenada 14:',listaOrdenada_14)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de radixSort sort en milisegundos')
 """""
 
-
+#algoritmo 15 burbuja_doble--------------------------------------------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_15 = burbuja_doble(listaEstimacion)
+print('lista ordenada 15:',listaOrdenada_15)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de burbuja_doble sort en milisegundos')
