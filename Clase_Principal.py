@@ -5,7 +5,12 @@ from Seg_Algoritmo3 import algoritmo3
 from Seg_Algoritmo4 import algoritmo4
 from seg_algortimo5 import mergeSort
 from Seg_algortimos6 import quicksort
-from Seg_Algoritmo7 import  heapsort
+from Seg_Algoritmo7 import heapsort
+from Seg_Algoritmos8 import gnome_sort
+from seg_algoritmo9 import bucketSort
+
+
+
 import time
 inicio = time.time()
 
@@ -138,13 +143,31 @@ print('lista ordenada 7:',listaOrdenada_7)
 fin = time.perf_counter()
 print((fin - inicio) * 1000, 'tiempo de ejecucion de heapsort en milisegundos')
 
-"""""
 
 
-#algoritmo 8
+
+#algoritmo 8 gnome_sort ------------------------------------------------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_8 = gnome_sort(listaEstimacion)
+print('lista ordenada 8:',listaOrdenada_8)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de gnome_sort en milisegundos')
+
+
 
 
 #algoritmo 9
-
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_9 = bucketSort(listaEstimacion)
+print('lista ordenada 9:',listaOrdenada_9)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de bucketSort en milisegundos')
+"""""
 
 

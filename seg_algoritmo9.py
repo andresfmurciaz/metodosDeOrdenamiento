@@ -1,37 +1,23 @@
-# Bucket Sort in Python
-import time
-inicio = time.time()
+def bucketSort(lista):
+    # Obtener el valor máximo y la longitud de la lista
+    max_value = max(lista)
+    size = len(lista)
 
+    # Crear una lista de buckets (contenedores) y llenarla con listas vacías
+    bucket = [[] for _ in range(size)]
 
-def bucketSort(array):
-    bucket = []
+    # Asignar cada elemento de la lista en su correspondiente bucket
+    for i in range(size):
+        bucket_index = int(lista[i] * size / (max_value + 1))
+        bucket[bucket_index].append(lista[i])
 
-    # Create empty buckets
-    for i in range(len(array)):
-        bucket.append([])
-
-    # Insert elements into their respective buckets
-    for j in array:
-        index_b = int(10 * j)
-        bucket[index_b].append(j)
-
-    # Sort the elements of each bucket
-    for i in range(len(array)):
+    # Ordenar los elementos dentro de cada bucket usando otro algoritmo de ordenamiento
+    for i in range(size):
         bucket[i] = sorted(bucket[i])
 
-    # Get the sorted elements
-    k = 0
-    for i in range(len(array)):
-        for j in range(len(bucket[i])):
-            array[k] = bucket[i][j]
-            k += 1
-    return array
+    # Concatenar los elementos de los buckets en la lista de salida
+    result = []
+    for i in range(size):
+        result += bucket[i]
 
-
-array = [.42, .32, .33, .52, .37, .47, .51]
-print("Sorted Array in descending order is")
-print(bucketSort(array))
-
-
-fin = time.time()
-print(fin-inicio),input('tiempo de ejecucion del algoritmo')
+    return result
