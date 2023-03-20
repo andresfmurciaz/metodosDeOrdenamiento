@@ -3,6 +3,7 @@ from Seg_Algoritmos1 import algoritmo1
 from Seg_Algoritmos2 import algoritmo2
 from Seg_Algoritmo3 import algoritmo3
 from Seg_Algoritmo4 import algoritmo4
+from seg_algortimo5 import mergeSort
 
 
 import time
@@ -99,24 +100,22 @@ print('lista ordenada 4:',listaOrdenada_4)
 fin = time.perf_counter()
 print((fin - inicio) * 1000, 'tiempo de ejecucion de cocktailSort en milisegundos')
 
-"""""
+
 print('')
-#algoritmo 5-
+#algoritmo 5-mergesort------------------------------------------------------------------------
 inicio = time.perf_counter()
 # se llama la clase donde esta el metodo
-algoritmo_4 = algoritmo4(listaEstimacion)
-listaOrdenada_4 = algoritmo_4.cocktailSort(listaEstimacion)
-print('lista ordenada 4:',listaOrdenada_4)
+listaOrdenada_5 = mergeSort(listaEstimacion)
+print('lista ordenada 5:',listaOrdenada_5)
 #mide el tiempo
 fin = time.perf_counter()
-print((fin - inicio) * 1000, 'tiempo de ejecucion de cocktailSort en milisegundos')
+print((fin - inicio) * 1000, 'tiempo de ejecucion de mergesort en milisegundos')
+
+"""""
 
 
 
-
-
-
-#algoritmo 6
+#algoritmo 6 
 
 
 #algoritmo 7
