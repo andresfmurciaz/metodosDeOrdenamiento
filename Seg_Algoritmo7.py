@@ -1,67 +1,33 @@
-#Metodo HeapSort
-import time
-inicio = time.time()
-from random import sample 
-# Importamos un Método de la biblioteca random para generar listas aleatorias
+def heapsort(lista):
+    n = len(lista)
 
-lista = list(range(100)) # Creamos la lista base con números del 1 al 100
+    # construir un max-heap
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(lista, n, i)
 
-# Creamos una lista aleatoria con sample 
-#(8 elementos aleatorios de la lista base)
-vectorheap = sample(lista,8)
+    # extraer elementos de uno en uno
+    for i in range(n - 1, 0, -1):
+        lista[i], lista[0] = lista[0], lista[i]  # intercambiar
+        heapify(lista, i, 0)
 
-def heapsort(vectorheap):
-    """Esta función ordenara el vector que le pases como argumento 
-    con el Método Heap Sort"""
-    
-    # Imprimimos la lista obtenida al principio (Desordenada)
-    print("El vector a ordenar con heap es:", vectorheap)
+    return lista
 
-    largo = 0 # Establecemos un contador del largo
-        
-    for _ in vectorheap:
-        largo += 1 # Obtenemos el largo del vector
 
-    # Para amontonar la subparte a partir de i. 
-    # n es el tamaño del montón.
-    def amontonar(vectorheap, n, i): 
-        mas_largo = i # Tomamos i como el más grande 
-        izq = 2 * i + 1      
-        der = 2 * i + 2    
-    
-        
-        if izq < n and vectorheap[i] < vectorheap[izq]: 
-            mas_largo = izq 
-    
-        # Ver si existe la subparte de i correctamente y 
-        # si es mayor que i
-        if der < n and vectorheap[mas_largo] < vectorheap[der]: 
-            mas_largo = der 
-            
-    
-        if mas_largo != i: 
-            vectorheap[i],vectorheap[mas_largo] = vectorheap[mas_largo],vectorheap[i] 
-            # Cambiar el origen, si es necesario
-            # amontonar el origen. 
-            amontonar(vectorheap, n, mas_largo)
-            
-    def heap(vectorheap):
-        
-        n = largo
-        # Crear un montón maximo 
-        for i in range(n//2 - 1, -1, -1): 
-            amontonar(vectorheap, n, i) 
-    
-        # Extraer elementos uno a uno
-        for i in range(n-1, 0, -1): 
-            vectorheap[i], vectorheap[0] = vectorheap[0], vectorheap[i] 
-            # Intercambio 
-            amontonar(vectorheap, i, 0)
-        
-    heap(vectorheap)
-    print("El vector ordenado con heap es:", vectorheap)
+def heapify(lista, n, i):
+    # inicializar el mayor como la raíz
+    mayor = i
+    izquierda = 2 * i + 1
+    derecha = 2 * i + 2
 
-heapsort(vectorheap)
+    # ver si el hijo izquierdo del nodo es mayor que la raíz
+    if izquierda < n and lista[izquierda] > lista[mayor]:
+        mayor = izquierda
 
-fin = time.time()
-print(fin-inicio),input('tiempo de ejecucion del algoritmo')
+    # ver si el hijo derecho del nodo es mayor que la raíz
+    if derecha < n and lista[derecha] > lista[mayor]:
+        mayor = derecha
+
+    # cambiar la raíz si es necesario
+    if mayor != i:
+        lista[i], lista[mayor] = lista[mayor], lista[i]
+        heapify(lista, n, mayor)

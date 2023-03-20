@@ -4,8 +4,8 @@ from Seg_Algoritmos2 import algoritmo2
 from Seg_Algoritmo3 import algoritmo3
 from Seg_Algoritmo4 import algoritmo4
 from seg_algortimo5 import mergeSort
-
-
+from Seg_algortimos6 import quicksort
+from Seg_Algoritmo7 import  heapsort
 import time
 inicio = time.time()
 
@@ -111,14 +111,34 @@ print('lista ordenada 5:',listaOrdenada_5)
 fin = time.perf_counter()
 print((fin - inicio) * 1000, 'tiempo de ejecucion de mergesort en milisegundos')
 
+
+
+
+
+#algoritmo 6 quicksort ----------------------------------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_6 = quicksort(listaEstimacion)
+print('lista ordenada 6:',listaOrdenada_6)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de quicksort en milisegundos')
+
+
+
+
+#algoritmo heapsort ----------------------------------------------------------------------------------------
+print('')
+inicio = time.perf_counter()
+# se llama la clase donde esta el metodo
+listaOrdenada_7 = heapsort(listaEstimacion)
+print('lista ordenada 7:',listaOrdenada_7)
+#mide el tiempo
+fin = time.perf_counter()
+print((fin - inicio) * 1000, 'tiempo de ejecucion de heapsort en milisegundos')
+
 """""
-
-
-
-#algoritmo 6 
-
-
-#algoritmo 7
 
 
 #algoritmo 8
