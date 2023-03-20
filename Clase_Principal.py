@@ -41,7 +41,7 @@ if __name__== '__main__':
  print('')
 #------------------ALGORITMOS-------------------------------------------------------------------------------------------
 
-"""""
+
 #algoritmo 0- ORDENAMIENTO DE BUSBUJA----------------------------------------------------------------------------------
  inicio = time.perf_counter()
  #se llama la clase donde esta el metodo
@@ -229,7 +229,7 @@ print('lista ordenada 14:',listaOrdenada_14)
 #mide el tiempo
 fin = time.perf_counter()
 print((fin - inicio) * 1000, 'tiempo de ejecucion de radixSort sort en milisegundos')
-"""""
+
 
 #algoritmo 15 burbuja_doble--------------------------------------------------------------------------------
 print('')
